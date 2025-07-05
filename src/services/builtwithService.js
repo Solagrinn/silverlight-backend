@@ -1,9 +1,7 @@
-
 import {getBuiltWithData} from '../controllers/builtwithController.js';
 
 export async function getFilteredBuiltWithData(url) {
     const data = await getBuiltWithData(url);
-
 
 
     const grouped = {};
@@ -21,11 +19,7 @@ export async function getFilteredBuiltWithData(url) {
                     grouped[tag] = [];
                 }
 
-                grouped[tag].push(tech.Name
-                    //isPremium: tech.IsPremium,
-                    //firstDetected: tech.FirstDetected,
-                    //lastDetected: tech.LastDetected,
-                );
+                grouped[tag].push(tech.Name);
             }
         }
     }
