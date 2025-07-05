@@ -1,10 +1,9 @@
-// services/builtwithService.js
+
 import {getBuiltWithData} from '../controllers/builtwithController.js';
 
 export async function getFilteredBuiltWithData(url) {
     const data = await getBuiltWithData(url);
 
-    // Example: filter out categories like 'Analytics'
 
 
     const grouped = {};
@@ -31,6 +30,5 @@ export async function getFilteredBuiltWithData(url) {
         }
     }
 
-    // You can also map it to just needed fields
     return grouped
 }
