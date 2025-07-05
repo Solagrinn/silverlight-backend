@@ -10,7 +10,7 @@ export default async function urlValidatorHandler(req, res, query) {
     }
 
     const isValid = await checkUrlExists(url);
-    console.log("hit checkurl")
+    console.log(`hit checkurl `)
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ valid: isValid }));
 }
