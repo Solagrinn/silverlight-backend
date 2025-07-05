@@ -17,5 +17,5 @@ export async function getBuiltWithData(url) {
         noAttributeData: true
     });
 
-    return await builtwith.free(url);
+    //return await builtwith.free(url);
 }

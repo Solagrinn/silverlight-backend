@@ -1,4 +1,4 @@
-
+// import staticData from '../filteredRES.json' with {type: 'json'};
 import {getFilteredBuiltWithData} from "../services/builtwithService.js";
 
 export default function builtwithHandler(req, res, query) {
@@ -13,7 +13,7 @@ export default function builtwithHandler(req, res, query) {
         .then(data => {
             res.writeHead(200, {'Content-Type': 'application/json'});
             res.end(JSON.stringify(data));
-            //res.end(JSON.stringify(staticData));
+            //res.end(JSON.stringify(staticData)); For testing without using api calls
         })
         .catch(err => {
             console.error(err);
